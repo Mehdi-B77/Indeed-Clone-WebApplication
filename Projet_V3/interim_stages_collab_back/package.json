@@ -1,0 +1,36 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:dependencies": "cd interim_stages_collab_back/service_registry && npm install && cd ../service_abonnements && npm install && cd ../service_authentication && npm install && cd ../service_candidatures && npm install && cd ../service_emplois && npm install && cd ../service_notifications && npm install && cd ../service_offres && npm install && cd ../service_paiements && npm install && cd ../service_users && npm install && cd ../service_conventions && npm install && cd ../api_gateway && npm install",
+    "start:service_registry": "cd service_registry && node service.js",
+    "start:service_abonnements": "cd service_abonnements && node service.js",
+    "start:service_authentication": "cd service_authentication && node service.js",
+    "start:service_candidatures": "cd service_candidatures && node service.js",
+    "start:service_emplois": "cd service_emplois && node service.js",
+    "start:service_notifications": "cd service_notifications && node service.js",
+    "start:service_offres": "cd service_offres && node service.js",
+    "start:service_paiements": "cd service_paiements && node service.js",
+    "start:service_users": "cd service_users && node service.js",
+    "start:service_conventions": "cd service_conventions && node service.js",
+    "start:api_gateway": "cd api_gateway && node app.js",
+    "start:services": "npm-run-all -p start:service_registry start:service_abonnements start:service_authentication start:service_candidatures start:service_emplois start:service_notifications start:service_offres start:service_paiements start:service_users start:service_conventions"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^2.0.6",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
